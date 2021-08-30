@@ -20,6 +20,20 @@ app.get('/validateLoan', (req, res) => {
   }
 })
 
+
+app.get('/validateLoan2', (req, res) => {
+  let name = req.query.name;
+  let salary = req.query.salary;
+  let loan = req.query.loan;
+  let creditscore = req.query.creditscore;
+
+  if(salary && loan && creditscore){
+    res.json({"result":"Loan Approved",status:200})
+  }else{
+    res.json({"result":"Invalid data",status:500})
+  }
+})
+
 app.listen(port, (req,res) => {
   console.log("Listening on the port  : ",port)
 })
