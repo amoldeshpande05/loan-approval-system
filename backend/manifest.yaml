@@ -1,4 +1,4 @@
 applications:
-  - name: sample-loan-app
+  - name: sample-loan-backend-app
     memory: 100M
     command: node server.js

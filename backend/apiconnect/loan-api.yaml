@@ -14,25 +14,40 @@ paths:
     get:
       summary: Loan Approval Api
       parameters:
-        - name: name
+        - name: email
           in: query
-          description: name string
-          required: true
+          description: email string
+          required: false
           type: string
-        - name: salary
+        - name: fname
           in: query
-          description: salary string
-          required: true
+          description: fname string
+          required: false
+          type: string
+        - name: lname
+          in: query
+          description: lname string
+          required: false
           type: string
         - name: loan
           in: query
           description: loan string
           required: true
           type: string
-        - name: creditscore
+        - name: sourceIncome
           in: query
-          description: creditscore string
+          description: sourceIncome string
+          required: false
+          type: string
+        - name: income
+          in: query
+          description: income string
           required: true
+          type: string
+        - name: reason
+          in: query
+          description: reason string
+          required: false
           type: string
       responses:
         '200':
@@ -62,21 +77,7 @@ x-ibm-configuration:
                     stop-on-error:
                       - null
                     version: 1.0.0
-                    target-url: 'https://sample-loan-app.eu-gb.mybluemix.net/validateLoan?name={name}&salary={salary}&loan={loan}&creditscore={creditscore}'
-              - operations:
-                - verb: get
-                  path: /validateLoan2
-              execute:
-                - invoke:
-                    title: invoke-add
-                    timeout: 60
-                    verb: GET
-                    cache-response: protocol
-                    cache-ttl: 900
-                    stop-on-error:
-                      - null
-                    version: 1.0.0
-                    target-url: 'https://sample-loan-app.eu-gb.mybluemix.net/validateLoan2?name={name}&salary={salary}&loan={loan}&creditscore={creditscore}'
+                    target-url: 'http://{HOST}/validateLoan?email={email}&fname={fname}&lname={lname}&loan={loan}&sourceIncome={sourceIncome}&income={income}&reason={reason}'
           otherwise: []
           version: 1.0.0
     catch: []
