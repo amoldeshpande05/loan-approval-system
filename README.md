@@ -1,4 +1,9 @@
 # loan-approval-system
+APIC config :
+server=apimanager.eu-gb.apiconnect.cloud.ibm.com
+organization=amoldeshpandeinibmcom-dev
+username=amoldeshpandeinibmcom
+REGION=eu-gb
 
 
 Steps:
@@ -9,3 +14,6 @@ Steps:
     g=CATALOG_NAME
 3. Test
     https://api.{REGION}.apiconnect.appdomain.cloud/{ORGANIZATION}/{CATELOG}/{ENDPOINT}?{PARAMS}
+4. Clear
+apic products:clear --catalog=loan --organization=amoldeshpandeinibmco
+m-dev --server=apimanager.eu-gb.apiconnect.cloud.ibm.com --confirm loan
