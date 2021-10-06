@@ -1,21 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
- name: no-priv-rootful
+ name: podman-priv
 spec:
  containers:
-   - name: no-priv-rootful
+   - name: priv
      image: quay.io/podman/stable
      args:
        - sleep
        - "infinity"
      securityContext:
-       capabilities:
-         add:
-           - "SYS_ADMIN"
-           - "MKNOD"
-           - "SYS_CHROOT"
-           - "SETFCAP"
-     resources:
-       limits:
-         github.com/fuse: 1
+       privileged: true
