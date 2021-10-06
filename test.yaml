@@ -5,7 +5,7 @@ metadata:
 spec:
  containers:
    - name: priv
-     image: quay.io/podman/stable
+     image: amoldeshpande/custom-podman-root
      args:
        - sleep
        - "infinity"
