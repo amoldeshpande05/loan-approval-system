@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: podman-priv
+spec:
+ containers:
+   - name: priv
+     image: amoldeshpande/custom-podman-root
+     args:
+       - sleep
+       - "infinity"
+     securityContext:
+       privileged: true
+     
