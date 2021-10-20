@@ -9,7 +9,6 @@ spec:
      args:
        - sleep
        - "infinity"
-     command: ["podman pull amoldeshpande/sampleapp1-v1:latest"]
      securityContext:
        privileged: true
      
