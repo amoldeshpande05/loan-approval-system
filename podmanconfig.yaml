@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
- name: podman-priv
+ name: podman
 spec:
  containers:
-   - name: priv
-     image: amoldeshpande/custom-podman-root
+   - name: terminal
+     image: amoldeshpande/podman-che
      args:
        - sleep
        - "infinity"
