@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
- name: podman
+ name: app=nodejs
 spec:
  containers:
-   - name: terminal
+   - name: app=terminal
      image: amoldeshpande/podman-che
      args:
        - sleep
