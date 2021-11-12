@@ -5,6 +5,7 @@ metadata:
 spec:
  containers:
    - image: amoldeshpande/custom-podman-root
+     name: test
      args:
        - sleep
        - "infinity"
