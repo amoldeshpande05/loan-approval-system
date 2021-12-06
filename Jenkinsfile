@@ -8,6 +8,7 @@ pipeline {
                 sh 'mkdir build'
                 sh 'touch build/car.txt'
                 sh 'echo "chassis">build/car.txt'
+                sh 'docker images'
             }
         }
         stage('Test') {
