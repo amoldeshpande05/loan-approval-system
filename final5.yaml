@@ -40,6 +40,6 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: quay.io/eclipse/che--centos--mysql-57-centos7:latest-e08ee4d43b7356607685b69bde6335e27cf20c020f345b6c6c59400183882764
+        image: quay.io/devplayground/developer-container-utilities:latest
       ports:
         - containerPort: 3306
