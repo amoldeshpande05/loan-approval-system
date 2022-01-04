@@ -41,9 +41,6 @@ spec:
       containers:
       - name: mysql
         image: quay.io/devplayground/developer-container-utilities:latest
-        args:
-        - sleep
-        - "infinity"
         securityContext:
           privileged: true
       ports:
