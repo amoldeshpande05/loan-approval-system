@@ -1,11 +1,8 @@
 apiVersion: v1
 kind: Pod
 metadata:
- name: podman
- labels:
-   app.kubernetes.io/name: podman
-   app.kubernetes.io/component: database
-   app.kubernetes.io/part-of: petclinic
+  labels:
+    app.kubernetes.io/name: podman
 spec:
  containers:
    - name: container
