@@ -46,4 +46,7 @@ spec:
         - "infinity"
         securityContext:
           privileged: true
+      ports:
+        - containerPort: 3306
+         
 
